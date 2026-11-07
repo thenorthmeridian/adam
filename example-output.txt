@@ -1,0 +1,17 @@
+$ python3 adam.py examples/good-note.md
+[the EVE] present
+[the dive] present: cites evidence
+[what changed] present: names something open
+ADAM: PASS
+
+$ python3 adam.py examples/free-dive.md
+[the EVE] MISSING
+[the dive] present: cites evidence
+[what changed] present: names something open
+ADAM: FAIL
+exit=1
+
+$ python3 -m unittest discover -s tests
+Ran 10 tests in 0.003s
+
+OK
